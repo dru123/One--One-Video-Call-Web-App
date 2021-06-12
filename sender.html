@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+    <body >
+        <div class="dis">
+        
+     <h2 class="subtitle">Join in one click</h2>
+     <div class="container">
+        
+        
+         <video  class="styles" 
+ autoplay muted loop playsinline preload="auto"
+  poster="//images.ctfassets.net/1t4zag4zjt00/4Ed6pRxzIkNFDMaWH9KziR/42253d53cf7e9a2c1a3cf7b5ed8f3bc2/simple-join_3x.png">
+ <source src="//videos.ctfassets.net/1t4zag4zjt00/2xHNf3pQf1vMj4UYUfDDKr/7f017da86aef769afb893e5674596db3/simple-join_2x.mp4" type="video/mp4">
+ </video>
+     
+ 
+       
+     </div>
+     
+       
+ 
+         <div class="main_body">
+             <input placeholder="Enter Your Name..." 
+                    type="text"
+                  id="username-input"/><br>
+             <button onclick="sendUsername()" id="btn1">Send</button>
+             <button onclick="startCall()" id="btn2">Start Call</button>
+     
+         </div>
+      
+     
+ 
+ </div>
+    <div id="video-call-div">
+     <!-- autoplay is used when stream is avaiable it automatically strt playing -->
+     <video  muted id="local-video" autoplay></video>
+     <!-- video of remote user -->
+     <video id="remote-video" autoplay>
+       
+     </video>
+    
+     <!-- two button of mute and turn off the video -->
+     <div class="call-action-div">
+      <button onclick="muteVideo()"  id="button1">
+         
+            <i class=" fas fa-video"></i></button>
+            
+        <button onclick="muteAudio()" id="button2"><i class="fas fa-microphone-alt"></i></button>
+         <!-- <button onclick="share()" id="share-button">Share</button>      -->
+         
+         <button onclick="shareScreen()" id="button3"><i class=" fas fa-share-square"></i></button>
+         <button onclick="stopShare()" id="button4"><span class="material-icons-outlined material-icons">
+   stop_screen_share
+            </span></button>
+            <button onclick="leaveMeeting()" id="button5">leave</button>
+            <button id="button6"><i class="fas fa-expand"></i></button>
+        </div>
+        </div>
+
+
+         <script src="./sender.js"></script>
+     </body>
+ 
+
+  
+</html>
